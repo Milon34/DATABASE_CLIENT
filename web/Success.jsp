@@ -9,7 +9,7 @@
 <jsp:include page="link.jsp"/>
 <html>
 <head>
-    <title>Title</title>
+    <title>success</title>
 </head>
 <body>
 <div class="main-wrapper">
