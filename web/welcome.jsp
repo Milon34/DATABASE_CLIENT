@@ -334,7 +334,7 @@
             <a href="#" class="btn btn-primary btn-md">SMS</a>
             <a href="#" class="btn btn-primary btn-md">Email</a>
             <a href="#" class="btn btn-primary btn-md">Create Table</a>
-            <a href="#" class="btn btn-primary btn-md">Export</a>
+            <a href="#" class="btn btn-primary btn-md">Variables</a>
             <a class="btn btn-primary btn-md" href="datatable.jsp"  >Structure</a>
             <a href="#" class="btn btn-primary btn-md">Drop</a>
             <a href="#" class="btn btn-primary btn-md">Settings</a>
