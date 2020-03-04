@@ -7,9 +7,12 @@
 
 
 <div class="limiter">
+
     <div class="container-login100" style="background-image: url('image/bg-01.jpg');">
+
         <div class="wrap-login100">
-            <form action="Signinprocess.jsp" method="post" class="login100-form validate-form">
+            <%--<h1 style="text-align: center">Database</h1>--%>
+            <form action="/login" method="post" class="login100-form validate-form">
 					<span class="login100-form-logo">
 						<i class="zmdi zmdi-landscape"></i>
 					</span>
@@ -43,7 +46,7 @@
                 </div>
 
                 <div class="text-center p-t-90">
-                    <a class="txt1" href="#">
+                    <a class="txt1" href="forgot.jsp">
                         <b>Forgot Password?</b>
                     </a>
                     <p style="color:sandybrown">Don't have an Account? <a style="color: yellow;border: solid 1px" href="Signup.jsp">SIGN UP</a></p>

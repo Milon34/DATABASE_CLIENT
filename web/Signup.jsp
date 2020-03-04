@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Creative Colorlib SignUp Form</title>
+    <title>Creative Database Client SignUp Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="application/x-javascript">
@@ -20,10 +20,10 @@
 <body>
 
 <div class="main-w3layouts wrapper">
-    <h1>Creative SignUp Form</h1>
+    <h1 style="color: wheat">Creative Database Client SignUp Form</h1>
     <div class="main-agileinfo">
         <div class="agileits-top">
-            <form action="process.jsp" method="post">
+            <form action="/register" method="post">
                 <input class="text" type="text" name="username" placeholder="Username " required="">
                 <input class="text email" type="email" name="email" placeholder="Email" required="">
                 <input class="text" type="text" name="gender" placeholder="Gender" required=""><br>
@@ -48,7 +48,7 @@
                 </div>
                 <input type="submit" value="SIGNUP" >
             </form>
-            <p>Don't have an Account? <a href="Signin.jsp"> Login Now!</a></p>
+            <p>Don't have an Account? <a href="Signin.jsp" style="border: solid 2px"> Login Now!</a></p>
         </div>
     </div>
 
