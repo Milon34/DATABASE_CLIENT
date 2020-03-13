@@ -230,6 +230,28 @@
 
 
 
+
+
+        function showDelete_table() {
+
+            $("#colNo").hide();
+            $("#inputdiv").hide();
+
+
+
+            var query = "drop table " + prompt("Enter Table name.");
+            //alert(query);
+
+            $.get("Query_Execute", {
+                sql: query
+            }, function (data, status) {
+                alert(data);
+                location.reload(true);
+            });
+
+        }
+
+
     </script>
 
 </head>
