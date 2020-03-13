@@ -19,25 +19,25 @@ public class Forgot_Password extends HttpServlet {
 
 
         try {
-            Connection con= DbConnection.getConnection();
             String email=request.getParameter("email");
             String password=request.getParameter("password");
-            PreparedStatement ps=con.prepareStatement("UPDATE registration SET password=? WHERE email=?");
-            ps.setString(2,email);
-            ps.setString(1,password);
-            int i=ps.executeUpdate();
+//            PreparedStatement ps=con.prepareStatement("UPDATE registration SET password=? WHERE email=?");
+//            ps.setString(2,email);
+//            ps.setString(1,password);
+//            int i=ps.executeUpdate();
 
 
             int code= (int) ((Math.random()*99999)+11111);
             SendEmail.send(email,"Confirmation code","Welcome to Database Client . Your code here:"+code,SendEmail.TEXT_MAIL);
 
-            if (i>0){
+
+                request.getSession().setAttribute("email",email);
+                request.getSession().setAttribute("password",password);
                 request.getSession().setAttribute("Confirmation_code",code);
-                response.sendRedirect("ConfirmationEmail.jsp");
-            }
-            else {
-                response.sendRedirect("forgot.jsp");
-            }
+                request.getRequestDispatcher("ConfirmationForgot.jsp").forward(request,response);
+                //response.sendRedirect("ConfirmationEmail.jsp");
+
+
 
         } catch (Exception e) {
             e.printStackTrace();
