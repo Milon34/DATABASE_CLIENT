@@ -251,7 +251,47 @@
 
         }
 
+         function deleteRow(v)
+        {
+            document.getElementById('info').innerHTML = "";
+            //alert(v.rowIndex);
+            var row = v.rowIndex;
+            var tab = document.getElementById('myTable');
+            var header = tab.rows.item(0).cells;
+            var obj = tab.rows.item(row).cells;
+            var sql = 'delete from ' + tbl_name + ' where ';
+            //alert(tbl_name);
+            if (obj.length === 2) {
+                for (var i = 0; i < obj.length - 1; i++)
+                {
+                    //info.innerHTML = info.innerHTML + ' ' + obj.item(i).innerHTML;
 
+                    sql += header.item(i).innerHTML + "='" + obj.item(i).innerHTML + "'";
+
+                    //info.innerHTML = info.innerHTML + '<br />';
+                }
+            }
+            else {
+                for (var i = 0; i < obj.length - 2; i++)
+                {
+                    //info.innerHTML = info.innerHTML + ' ' + obj.item(i).innerHTML;
+
+                    sql += header.item(i).innerHTML + "='" + obj.item(i).innerHTML + "' and ";
+
+                    //info.innerHTML = info.innerHTML + '<br />';
+                }
+                sql += header.item(obj.length - 2).innerHTML + "='" + obj.item(obj.length - 2).innerHTML + "'";
+            }
+            $.get("Query_Execute",
+                {
+                    sql: sql
+                }, function (data, status)
+                {
+                    alert(data);
+                    location.reload(true);
+                });
+
+        }
     </script>
 
 </head>
